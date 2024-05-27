@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE html>
+<html ng-app="aplicacionMundial">
+<head>
+    <title>Taller Angular JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+    <div class="container theme-showcase" role="main">
+        <div class="row featurette">
+            <div class="col-md-5">
+                <img src="imagenes/img2.jpg" class="img-responsive" alt="400x400" data-holder-rendered="true">
+            </div>
+            <div class="col-md-7">
+                <h2>Sorteo Mundial</h2>
+                <p class="lead">Sorteo mundial, es ahora o nunca, no desaproveches la oportunidad. Inscribete y podras ser el ganador de un viaje para 4 persona a la final del mundial de Estados Unidos, Mexico y Canda.</p>
+            </div>
+        </div>
+        <hr>
+        <toolbar></toolbar>
+        <div ng-if="toolbar.isSelected(1)">
+            <competitor-form></competitor-form>
+        </div>
+        <div ng-if="toolbar.isSelected(2)">
+            <competitor-info></competitor-info>
+        </div>
+        <div ng-if="toolbar.isSelected(3)">
+            <login-form></login-form>
+        </div>
+        <div ng-if="toolbar.isSelected(4)">
+            <logged-in-competitor></logged-in-competitor>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js.map"></script>
+    <script type="text/javascript" src="js/AngularControllers/app.js"></script>
+</body>
+</html>
+

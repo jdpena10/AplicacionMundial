@@ -4,14 +4,38 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<div ng-if="loggedInCompetitor">
-    <h2>Logged In Competitor</h2>
-    <p>Name: {{loggedInCompetitor.name}}</p>
-    <p>Surname: {{loggedInCompetitor.surname}}</p>
-    <p>Address: {{loggedInCompetitor.address}}</p>
-    <p>Age: {{loggedInCompetitor.age}}</p>
-    <p>Telephone: {{loggedInCompetitor.telephone}}</p>
-    <p>Cellphone: {{loggedInCompetitor.cellphone}}</p>
-    <p>City: {{loggedInCompetitor.city}}</p>
-    <p>Country: {{loggedInCompetitor.country}}</p>
+
+<h2 class="form-title">Informacion del usuario</h2>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Usuario</div>
+    <!-- Table -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Telephone</th>
+            <th>Cellphone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="competitor in competitors | orderBy: 'id'">
+                <td>{{competitor.id}}</td>
+                <td>{{competitor.name}}</td>
+                <td>{{competitor.surname}}</td>
+                <td>{{competitor.age}}</td>
+                <td>{{competitor.telephone}}</td>
+                <td>{{competitor.cellphone}}</td>
+                <td>{{competitor.address}}</td>
+                <td>{{competitor.city}}</td>
+                <td>{{competitor.country}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
